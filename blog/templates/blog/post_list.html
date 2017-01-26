@@ -10,5 +10,17 @@
 
 <p>django 1.10.2</p>
 
+
+<p>Lista de objects</p>
+<br>
+
+{% for post in posts%}
+
+<p>Autor: {{post.author}}</p>
+<p>{{post.text|linebreaksbr}}</p>
+<hr>
+{%endfor%}
+
+
   </body>
 </html>
