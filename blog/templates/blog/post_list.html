@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <meta charset="utf-8">
-    <title>Django Web Framework</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+
+  <title>Django Web Framework</title>
   </head>
   <body>
 
-<h1>It's Works!</h1>
+<div class="row">
 
-<p>django 1.10.2</p>
-
-
-<p>Lista de objects</p>
-<br>
-
-{% for post in posts%}
-
-<p>Autor: {{post.author}}</p>
-<p>{{post.text|linebreaksbr}}</p>
-<hr>
-{%endfor%}
+<img src="http://www.unixstickers.com/image/cache/data/stickers/python/python_sh-600x600.png" height="100px" width="100px"> <h1>It's Works!</h1><br>
 
 
+<div class="col-lg-12">
+  {% for post in posts%}
+
+  <p>Autor: {{post.author}}</p>
+  <p>{{post.text|linebreaksbr}}</p>
+  <p>fecha: {{post.created_date}}</p>
+  <hr>
+  {%endfor%}
+</div>
+
+
+</div>
   </body>
 </html>
